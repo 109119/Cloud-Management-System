@@ -14,7 +14,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // TO DO
+        primaryStage.setTitle("Hello Fasilkom");
+
+        button = new Button();
+        button.setText("Click me");
+
+        StackPane layout = new StackPane();
+        layout.getChildren().add(button);
+
+        Scene scene = new Scene(layout, 300, 250);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+
     }
 
 }
