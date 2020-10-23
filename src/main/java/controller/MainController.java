@@ -24,6 +24,67 @@ public class MainController {
             kalkulator.setTotal(total);
 
             mainView.bindView(kalkulator);
+            mainView.emptyTextField();
+        }
+
+    }
+
+    public void hitungKurang(String nilai1, String nilai2) {
+
+        if (nilai1.isEmpty() || nilai2.isEmpty()) {
+
+        } else {
+            int nilaia = Integer.parseInt(nilai1);
+            int nilaib = Integer.parseInt(nilai2);
+
+            int total = nilaia - nilaib;
+
+            Kalkulator kalkulator = new Kalkulator();
+            kalkulator.setTotal(total);
+
+            mainView.bindView(kalkulator);
+            mainView.emptyTextField();
+
+        }
+
+    }
+
+    public void hitungKali(String nilai1, String nilai2) {
+
+        if (nilai1.isEmpty() || nilai2.isEmpty()) {
+
+        } else {
+            int nilaia = Integer.parseInt(nilai1);
+            int nilaib = Integer.parseInt(nilai2);
+
+            int total = nilaia * nilaib;
+
+            Kalkulator kalkulator = new Kalkulator();
+            kalkulator.setTotal(total);
+
+            mainView.bindView(kalkulator);
+            mainView.emptyTextField();
+
+        }
+
+    }
+
+    public void hitungBagi(String nilai1, String nilai2) {
+
+        if (nilai1.isEmpty() || nilai2.isEmpty()) {
+
+        } else {
+            int nilaia = Integer.parseInt(nilai1);
+            int nilaib = Integer.parseInt(nilai2);
+
+            int total = nilaia / nilaib;
+
+            Kalkulator kalkulator = new Kalkulator();
+            kalkulator.setTotal(total);
+
+            mainView.bindView(kalkulator);
+            mainView.emptyTextField();
+
         }
 
     }

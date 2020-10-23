@@ -51,6 +51,27 @@ public class Main extends Application implements MainView  {
 
             mainController.hitungTambah(nilai1, nilai2);
         });
+
+        btnMinus.setOnAction(e -> {
+            String nilai1 = tvFirstNumber.getText();
+            String nilai2 = tvSecondNumber.getText();
+
+            mainController.hitungKurang(nilai1, nilai2);
+        });
+
+        btnTimes.setOnAction(e -> {
+            String nilai1 = tvFirstNumber.getText();
+            String nilai2 = tvSecondNumber.getText();
+
+            mainController.hitungKali(nilai1, nilai2);
+        });
+
+        btnDivision.setOnAction(e -> {
+            String nilai1 = tvFirstNumber.getText();
+            String nilai2 = tvSecondNumber.getText();
+
+            mainController.hitungBagi(nilai1, nilai2);
+        });
     }
 
     private void prepare() {
@@ -58,7 +79,6 @@ public class Main extends Application implements MainView  {
         btnMinus = (Button) scene.lookup("#btnMinus");
         btnDivision = (Button) scene.lookup("#btnDivision");
         btnTimes = (Button) scene.lookup("#btnTimes");
-        btnCalculate = (Button) scene.lookup("#btnCalculate");
         tvFirstNumber = (TextField) scene.lookup("#tvFirstNumber");
         tvSecondNumber = (TextField) scene.lookup("#tvSecondNumber");
         textAnswer = (Text) scene.lookup("#tvAnswer");
@@ -68,5 +88,11 @@ public class Main extends Application implements MainView  {
     public void bindView(Kalkulator kalkulator) {
         String answer = kalkulator.getTotal().toString();
         textAnswer.setText(answer);
+    }
+
+    @Override
+    public void emptyTextField() {
+        tvFirstNumber.setText("");
+        tvSecondNumber.setText("");
     }
 }

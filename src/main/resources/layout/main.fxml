@@ -41,7 +41,7 @@
             <Font size="47.0" />
          </font>
       </Button>
-      <Button id="btnMinus" layoutX="315.0" layoutY="245.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="*">
+      <Button id="btnTimes" layoutX="315.0" layoutY="245.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="*">
          <font>
             <Font size="39.0" />
          </font>
@@ -51,10 +51,9 @@
             <Font size="33.0" />
          </font>
       </Button>
-      <Button id="btnCalculate" layoutX="227.0" layoutY="390.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" text="Calculate" />
-      <Text id="tvAnswer" layoutX="255.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer">
+      <Text id="tvAnswer" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer" textAlignment="CENTER" wrappingWidth="600.0">
          <font>
-            <Font size="28.0" />
+            <Font size="28.0" name="System Bold"/>
          </font>
       </Text>
    </children>
