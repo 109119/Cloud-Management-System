@@ -4,8 +4,8 @@ public class Kalkulator {
 
     Integer total;
 
-    public Kalkulator(Integer total) {
-        this.total = total;
+    public Kalkulator() {
+        this.total = 0;
     }
 
     public Integer getTotal() {

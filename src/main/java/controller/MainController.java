@@ -4,10 +4,10 @@ import model.Kalkulator;
 
 public class MainController {
 
-    Kalkulator kalkulator;
+    MainView mainView;
 
-    public MainController() {
-        this.kalkulator = kalkulator;
+    public MainController(MainView mainView) {
+        this.mainView = mainView;
     }
 
     public void hitungTambah(String nilai1, String nilai2) {
@@ -18,6 +18,12 @@ public class MainController {
             int nilaia = Integer.parseInt(nilai1);
             int nilaib = Integer.parseInt(nilai2);
 
+            int total = nilaia + nilaib;
+
+            Kalkulator kalkulator = new Kalkulator();
+            kalkulator.setTotal(total);
+
+            mainView.bindView(kalkulator);
         }
 
     }
