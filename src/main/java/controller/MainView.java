@@ -2,7 +2,7 @@ package controller;
 
 import model.Kalkulator;
 
-public interface KalkulatorView {
+public interface MainView {
 
     public void bindView(Kalkulator kalkulator);
 
