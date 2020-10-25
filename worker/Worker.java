@@ -16,13 +16,13 @@ public class Worker {
 
     public Integer calculate(int num1, int num2, String operand) {
         if (operand.equals("tambah")) {
-
+            return num1+num2;
         } else if (operand.equals("kurang")){
-
+            return num1-num2;
         } else if (operand.equals("kali")){
-
+            return num1*num2;
         } else if (operand.equals("bagi")){
-
+            return num1/num2;
         }
 
     }
@@ -72,5 +72,19 @@ public class Worker {
         }
         s.close()
     };
+
+    public void retrieveCalcInput(){
+        try {
+            Socket s = new Socket(this.ipAddress, Integer.valueOf(this.port));
+
+            PrintWriter pr = new PrintWriter(s.getOutputStream());
+            pr.write("RETRIVECALCINPUT");
+            pr.flush();
+
+            s.close();
+        } catch(Exception e){
+            System.out.println("Something went wrong.");
+        }
+    }
 
 }
