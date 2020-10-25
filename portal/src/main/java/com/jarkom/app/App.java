@@ -7,6 +7,8 @@ public class App
     public static void main( String[] args )
     {
         //server.initiateWorker();
-        server.listen();
+        while(1){
+            server.listen();
+        }
     }
 }

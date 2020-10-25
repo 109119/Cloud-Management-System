@@ -80,7 +80,7 @@ public class Portal {
             Socket worker = new Socket("54.226.34.198", 6969);
             
             PrintWriter pr = new PrintWriter(worker.getOutputStream());
-            pr.println(request);
+            pr.println("CALC " + str);
             pr.flush();
 
             worker.close();
