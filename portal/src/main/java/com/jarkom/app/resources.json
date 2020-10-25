@@ -1,0 +1,19 @@
+{
+    "worker": [
+      {
+        "name": "worker-1",
+        "ipAddress": "127.0.0.1",
+        "port": "6969"
+      },
+      {
+        "name": "worker-2",
+        "ipAddress": "127.0.0.1",
+        "port": "6969"
+      },
+      {
+        "name": "worker-3",
+        "ipAddress": "127.0.0.1",
+        "port": "6969"
+      }
+    ]
+  }
