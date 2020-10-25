@@ -14,8 +14,7 @@ public class Worker {
         this.status = Status.IDLE;
     }
 
-    public Integer calculate(int num1, int num2, String opr) {
-        String operand = opr.toLowerCase();
+    public Integer calculate(int num1, int num2, String operand) {
         if (operand.equals("tambah")) {
 
         } else if (operand.equals("kurang")){
@@ -47,6 +46,31 @@ public class Worker {
 
     }
 
-    public void listen(){};
+    public void listen(){
+        ServerSocket ss = new ServerSocket(this.serverPort);
+        Socket s = ss.accept();
+
+        InputStreamReader in = new InputStreamReader(s.getInputStream());
+        BufferedReader bf = BufferedReader(in);
+
+        String[] str = bf.readLine().split(" ");
+        if (str[0].equals("CALC")) {
+            switch (str[2]){
+                case "+":
+                    calculate(str[1],str[3],"tambah")
+                    break;
+                case "-":
+                    calculate(str[1],str[3],"kurang")
+                    break;
+                case "*":
+                    calculate(str[1],str[3],"kali")
+                    break;
+                case "/":
+                    calculate(str[1],str[3],"bagi")
+                    break;
+            }
+        }
+        s.close()
+    };
 
 }
