@@ -9,10 +9,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject; 
 import Worker;
 import java.net.Socket;
+import java.net.ServerSocket;
 
 public class Portal {
     private boolean isInitiated = false;
     private ArrayList<Worker> workerList;
+    private serverPort = 4201;
     
     public Portal(){
 
@@ -59,17 +61,25 @@ public class Portal {
     }
 
     public void listen(){
+        ServerSocket ss = new ServerSocket(this.serverPort);
+        Socket s = ss.accept();
+        
+        InputStreamReader in = new InputStreamReader(s.getInputStream());
+        BufferedReader bf = BufferedReader(in);
 
+        String str = bf.readLine();
+
+        s.close()
     }
 
     public void retrieveWorkerStatus(){
         Socket s = new Socket(ipAddress, port);
 
         PrintWriter pr = new PrintWriter(s.getOutputStream());
-        pr.write("RETRIVESTAT ");
+        pr.write("RETRIVESTAT");
         pr.flush();
         
-        s.closed();
+        s.close();
     }
 
     public int assignTask(ipAddress, port, task){
@@ -79,6 +89,6 @@ public class Portal {
         pr.write("ASSIGN " + task);
         pr.flush();
         
-        s.closed();
+        s.close();
     }
 }
