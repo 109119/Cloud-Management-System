@@ -8,6 +8,7 @@ import java.util.Map;
 import org.json.simple.JSONArray; 
 import org.json.simple.JSONObject; 
 import Worker;
+import java.net.Socket;
 
 public class Portal {
     private boolean isInitiated = false;
@@ -62,10 +63,22 @@ public class Portal {
     }
 
     public void retrieveWorkerStatus(){
+        Socket s = new Socket(ipAddress, port);
 
+        PrintWriter pr = new PrintWriter(s.getOutputStream());
+        pr.write("RETRIVESTAT ");
+        pr.flush();
+        
+        s.closed();
     }
 
-    public int assignTask(){
+    public int assignTask(ipAddress, port, task){
+        Socket s = new Socket(ipAddress, port);
 
+        PrintWriter pr = new PrintWriter(s.getOutputStream());
+        pr.write("ASSIGN " + task);
+        pr.flush();
+        
+        s.closed();
     }
 }
