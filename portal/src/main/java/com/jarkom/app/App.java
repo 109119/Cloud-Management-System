@@ -1,13 +1,12 @@
 package com.jarkom.app;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
+    private Portal server = new Portal();
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //server.initiateWorker();
+        server.listen();
     }
 }

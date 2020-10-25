@@ -8,7 +8,7 @@ public class MainController {
 
     MainView mainView;
     private String serverPort;
-    private String serverIP;
+    private String serverIP = "3.80.215.206";
 
     public MainController(MainView mainView) {
         this.mainView = mainView;

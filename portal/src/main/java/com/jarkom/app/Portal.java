@@ -77,6 +77,14 @@ public class Portal {
 
             String str = bf.readLine();
 
+            Socket worker = new Socket("54.226.34.198", 6969);
+            
+            PrintWriter pr = new PrintWriter(worker.getOutputStream());
+            pr.println(request);
+            pr.flush();
+
+            worker.close();
+            
             s.close();
 
         } catch(Exception e){
