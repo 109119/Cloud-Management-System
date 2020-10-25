@@ -1,7 +1,6 @@
 package controller;
 
 import model.Kalkulator;
-import model.Worker;
 
 public interface MainView {
 

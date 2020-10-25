@@ -2,17 +2,17 @@ package model;
 
 public class Kalkulator {
 
-    Integer total;
+    Long total;
 
     public Kalkulator() {
-        this.total = 0;
+        this.total = 0L;
     }
 
-    public Integer getTotal() {
+    public Long getTotal() {
         return total;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal(Long total) {
         this.total = total;
     }
 

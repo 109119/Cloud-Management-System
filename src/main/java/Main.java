@@ -3,12 +3,11 @@ import controller.MainView;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Kalkulator;
@@ -34,7 +33,7 @@ public class Main extends Application implements MainView  {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Hello Fasilkom");
+        primaryStage.setTitle("Simple Calcultor");
 
         Parent root = FXMLLoader.load(getClass().getResource("layout/main.fxml"));
         mainController = new MainController(this);
@@ -42,6 +41,7 @@ public class Main extends Application implements MainView  {
         scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.getIcons().add(new Image("img/keys.png"));
 
         prepare();
 
@@ -82,6 +82,10 @@ public class Main extends Application implements MainView  {
         tvFirstNumber = (TextField) scene.lookup("#tvFirstNumber");
         tvSecondNumber = (TextField) scene.lookup("#tvSecondNumber");
         textAnswer = (Text) scene.lookup("#tvAnswer");
+
+        tvFirstNumber.setStyle("-fx-text-inner-color: white; -fx-background-color: #353953; -fx-border-color: white;-fx-border-radius: 10px; -fx-border-width: 4px");
+        tvSecondNumber.setStyle("-fx-text-inner-color: white; -fx-background-color: #353953; -fx-border-color: white;-fx-border-radius: 10px; -fx-border-width: 4px");
+
     }
 
     @Override

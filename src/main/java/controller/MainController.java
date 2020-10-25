@@ -1,7 +1,6 @@
 package controller;
 
 import model.Kalkulator;
-import model.Worker;
 
 public class MainController {
 
@@ -16,10 +15,10 @@ public class MainController {
         if (nilai1.isEmpty() || nilai2.isEmpty()) {
 
         } else {
-            int nilaia = Integer.parseInt(nilai1);
-            int nilaib = Integer.parseInt(nilai2);
+            long nilaia = Long.parseLong(nilai1);
+            long nilaib = Long.parseLong(nilai2);
 
-            int total = nilaia + nilaib;
+            long total = nilaia + nilaib;
 
             Kalkulator kalkulator = new Kalkulator();
             kalkulator.setTotal(total);
@@ -35,10 +34,10 @@ public class MainController {
         if (nilai1.isEmpty() || nilai2.isEmpty()) {
 
         } else {
-            int nilaia = Integer.parseInt(nilai1);
-            int nilaib = Integer.parseInt(nilai2);
+            long nilaia = Long.parseLong(nilai1);
+            long nilaib = Long.parseLong(nilai2);
 
-            int total = nilaia - nilaib;
+            long total = nilaia - nilaib;
 
             Kalkulator kalkulator = new Kalkulator();
             kalkulator.setTotal(total);
@@ -55,10 +54,10 @@ public class MainController {
         if (nilai1.isEmpty() || nilai2.isEmpty()) {
 
         } else {
-            int nilaia = Integer.parseInt(nilai1);
-            int nilaib = Integer.parseInt(nilai2);
+            long nilaia = Long.parseLong(nilai1);
+            long nilaib = Long.parseLong(nilai2);
 
-            int total = nilaia * nilaib;
+            long total = nilaia * nilaib;
 
             Kalkulator kalkulator = new Kalkulator();
             kalkulator.setTotal(total);
@@ -75,10 +74,10 @@ public class MainController {
         if (nilai1.isEmpty() || nilai2.isEmpty()) {
 
         } else {
-            int nilaia = Integer.parseInt(nilai1);
-            int nilaib = Integer.parseInt(nilai2);
+            long nilaia = Long.parseLong(nilai1);
+            long nilaib = Long.parseLong(nilai2);
 
-            int total = nilaia / nilaib;
+            long total = nilaia / nilaib;
 
             Kalkulator kalkulator = new Kalkulator();
             kalkulator.setTotal(total);
