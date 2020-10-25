@@ -62,21 +62,33 @@ public class Main extends Application implements MainView  {
             String nilai1 = tvFirstNumber.getText();
             String nilai2 = tvSecondNumber.getText();
 
-            mainController.hitungKurang(nilai1, nilai2);
+            try {
+                mainController.hitungKurang(nilai1, nilai2);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
         });
 
         btnTimes.setOnAction(e -> {
             String nilai1 = tvFirstNumber.getText();
             String nilai2 = tvSecondNumber.getText();
 
-            mainController.hitungKali(nilai1, nilai2);
+            try {
+                mainController.hitungKali(nilai1, nilai2);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
         });
 
         btnDivision.setOnAction(e -> {
             String nilai1 = tvFirstNumber.getText();
             String nilai2 = tvSecondNumber.getText();
 
-            mainController.hitungBagi(nilai1, nilai2);
+            try {
+                mainController.hitungBagi(nilai1, nilai2);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
         });
     }
 

@@ -20,64 +20,16 @@ public class MainController {
         sendRequest(nilai1 + " + " + nilai2);
     }
 
-    public void hitungKurang(String nilai1, String nilai2) {
-
-        if (nilai1.isEmpty() || nilai2.isEmpty()) {
-
-        } else {
-            long nilaia = Long.parseLong(nilai1);
-            long nilaib = Long.parseLong(nilai2);
-
-            long total = nilaia - nilaib;
-
-            Kalkulator kalkulator = new Kalkulator();
-            kalkulator.setTotal(total);
-
-            mainView.bindView(kalkulator);
-            mainView.emptyTextField();
-
-        }
-
+    public void hitungKurang(String nilai1, String nilai2) throws IOException{
+        sendRequest(nilai1 + " - " + nilai2);
     }
 
-    public void hitungKali(String nilai1, String nilai2) {
-
-        if (nilai1.isEmpty() || nilai2.isEmpty()) {
-
-        } else {
-            long nilaia = Long.parseLong(nilai1);
-            long nilaib = Long.parseLong(nilai2);
-
-            long total = nilaia * nilaib;
-
-            Kalkulator kalkulator = new Kalkulator();
-            kalkulator.setTotal(total);
-
-            mainView.bindView(kalkulator);
-            mainView.emptyTextField();
-
-        }
-
+    public void hitungKali(String nilai1, String nilai2) throws IOException {
+        sendRequest(nilai1 + " * " + nilai2);
     }
 
-    public void hitungBagi(String nilai1, String nilai2) {
-
-        if (nilai1.isEmpty() || nilai2.isEmpty()) {
-
-        } else {
-            long nilaia = Long.parseLong(nilai1);
-            long nilaib = Long.parseLong(nilai2);
-
-            long total = nilaia / nilaib;
-
-            Kalkulator kalkulator = new Kalkulator();
-            kalkulator.setTotal(total);
-
-            mainView.bindView(kalkulator);
-            mainView.emptyTextField();
-
-        }
-
+    public void hitungBagi(String nilai1, String nilai2) throws IOException {
+        sendRequest(nilai1 + " / " + nilai2);
     }
 
     public void sendRequest(String request) throws IOException {
